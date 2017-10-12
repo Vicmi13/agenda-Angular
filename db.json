@@ -1,0 +1,39 @@
+{
+    "contactos": [
+        {
+            "id": 1,
+            "nombre": "Steve",
+            "apellidos": "Jobs",
+            "movil": "454545454",
+            "email": "stevejobs@apple.com"
+        },
+        {
+            "id": 2,
+            "nombre": "Bill",
+            "apellidos": "Gates",
+            "movil": "014343142",
+            "email": "gates@wind.com"
+        },
+        {
+            "id": 3,
+            "nombre": "Sundar",
+            "apellidos": "Pichai",
+            "movil": null,
+            "email": "pichai@paypal.com"
+        },
+        {
+            "id": 4,
+            "nombre": "Elon",
+            "apellidos": "Musk",
+            "movil": "032580190",
+            "email": null
+        },
+        {
+            "id": 5,
+            "nombre": "Steve",
+            "apellidos": "Wozniak",
+            "movil": "23458091",
+            "email": "bikinibot@beach.com"
+        }
+    ]
+}

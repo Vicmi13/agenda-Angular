@@ -1,0 +1,16 @@
+<ul>
+  <!-- La dreictiva *ngFor itera por una coleccion 
+  dada y por cada elemn añade la jerarquia de etiquetas
+  HTML sobre la cuál se esta usando -->
+    
+  <li *ngFor= "let contacto of contactos " 
+   (click)= "notificarSeleccionContacto(contacto)" >  <!-- RECORDAR que la para suscripcion a un evento va entre ()-->
+  <!-- [class.rojo] ="contacto.toLowerCase().startsWith('s') "
+    [style.color] ="contacto.toLowerCase().startsWith('b') ? 'blue': 'green' " -->
+      {{ contacto.nombre }} {{contacto.apellidos}}
+
+  <!-- La suscripcion a eventos se hace poniendo entre parentesis
+  el nombre del mismo-->    
+  <button (click)= "notificarElminacionContacto(contacto)">Eliminar</button>
+  </li>
+</ul>

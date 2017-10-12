@@ -1,0 +1,28 @@
+
+<!-- Con esto ya se hace la relacion padre-hijo-->
+
+
+<div class="row">
+    <div class="six columns">
+      <!-- Para evaluar el valor de un atributo previamente a su asignacion se
+      deben de poner entre corchetes el nombre del articulo-->
+      <!--Si queremos recoger los datos que vienen dados en un evento
+      utilizamos la palabra reservada '$event'-->
+      <app-lista-contactos 
+        [contactos] = "nombres"
+        (contactosSeleccionados) = "verDetalles($event)"  
+        (botonEliminarPulsado) = "eliminarContacto($event)" > <!-- Con $event recoges los datos o valores que vienen en un evento-->
+      </app-lista-contactos>
+          <!-- Al poner los corchetes evalua lo que hay adentro de otra forma el valor
+          que se pase siempre va a ser un String-->
+    </div>
+    <div class="six columns">
+          <app-detalles-contacto
+            [contacto]= "contactoSeleccionado">
+           <!-- Va entre [] para enlazar datos del typescript-->
+  </app-detalles-contacto> <!-- Recordar que se hace  atraves de su selector (en el Typescript)-->
+    </div>
+  </div>
+  
+
+  

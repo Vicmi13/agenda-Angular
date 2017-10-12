@@ -1,0 +1,41 @@
+<!-- Enlazamos un 'FormGroup' al elemento <form> de HTML 
+  gracias a la directiva FormGroup. En el caso de querer enalzar 
+  propiedades del modelo del 'FormGroup' a los elems input del formulario
+  se hace usando la directiva 'formControlName'  -->
+<form [formGroup]="formulario"
+(ngSubmit) = "notificarGuardadoContacto()"> <!-- 'formulario'' Nombre de la instancia con la que fue definido-->
+  <div class="row">
+    <div class="offset-by-three six columns">
+      <label for="">Nombre</label>
+      <input  type="text" 
+              formControlName="nombre"
+              class="u-full-wild">
+      <span *ngIf="formulario.get('nombre').touched && formulario.get('nombre').invalid">
+        El nombre del contacto es obligatorio
+      </span>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="offset-by-three six columns">
+      <label for="">Apellidos</label>
+      <input type="text" 
+            formControlName="apellidos"
+            class="u-full-wild">
+      <span *ngIf="formulario.get('apellidos').touched && formulario.get('apellidos').invalid">
+        Los apellidos del contacto son obligatorios 
+      </span>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="offset-by-three six columns">
+      <button type="submit" 
+              [disabled]='formulario.invalid'
+              class="u-full-wild button-primary">
+              Guardar Contacto
+      </button>
+    </div>
+  </div>
+</form>
+

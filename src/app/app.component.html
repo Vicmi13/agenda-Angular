@@ -1,0 +1,36 @@
+<div class="container">
+  <header>
+    <h1>Agenda</h1>
+    <h4>Bienvenido </h4>
+  </header>
+
+  <!-- Barra de la navegacion.
+  En la directiva 'RotuerLink indicamos la ruta (path) 
+  la cual queremos navegar. Esta ruta tiene que estar definida 
+  en el modulo de routing '-->
+  <nav>
+    <ul>
+      <li>
+        <!-- Recordar para redireccionar a ruta se pone barra / -->
+        <a routerLink="/lista-contactos"
+          routerLinkActive= "seleccionada">Mis Contactos</a>
+      </li>
+      <li>
+        <a routerLink="/nuevo-contacto"
+          routerLinkActive= "seleccionada">Nuevo Contacto</a>
+        </li>
+    </ul>
+  </nav>
+
+  <!-- La directiva 'Router Outlet  define la zona dinamica la 'Zona dinamica 
+  en la cual se pintarán las distintas rutas que se naveguen. Cada ruta navegada 
+  renderizará el componente asociado en esta zona dinámica.
+  El ob -->
+  <router-outlet></router-outlet>
+
+</div>
+
+
+
+
+
